@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Maven+Pro:wght@400..900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */;
+    font-family: "Maven Pro";
+  }
+
+.bhawanPage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Optional background color */
+    z-index: 1;
+    background-image: url(./phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+
+  #firstpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Optional background color */
+    z-index: 1;
+    background-image: url(./phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+  }
+
+  #firstpage h1{
+    font-size: 20px;
+    font-family: "Barlow";
+    font-weight: 550;
+  }
+
+  #firstpage select{
+    width: 324px;
+    height: 40px;
+    border-radius: 4px;
+    border: 0px;
+    color: rgb(0,0,0,0.6);
+    padding: 10px;
+  }

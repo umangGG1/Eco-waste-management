@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    font-family: "Lato";
+  }
+
+  #loginForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Optional background color */
+    z-index: 1;
+    background-image: url(./phone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato";
+  }
+
+  #loginForm form{
+    display: flex;
+    flex-direction: column;
+  }
+  #loginForm form input{
+    margin-top: 20px;
+    width: 320px;
+    height: 25px;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: "Lato";
+    border: 0px;
+  }
+  #error.message {
+    width: 370px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
