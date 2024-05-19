@@ -2,7 +2,7 @@ import React from "react";
 import "./rajeevBhawan.css";
 import photo from "./thar.png";
 import { useNavigate } from 'react-router-dom';
-
+import { baseUrl } from "../../url";
 const Rajeev = () => {
   const bhawanName = "Rajeev Bhawan"; // Define the bhawan name
   const navigate= useNavigate();
@@ -13,7 +13,7 @@ const Rajeev = () => {
       status: status,
     };
 
-    fetch('http://localhost:8080/api/bhawan/store', {
+    fetch(`${baseUrl}/api/bhawan/store`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
