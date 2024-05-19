@@ -10,13 +10,17 @@ const bhawanRoutes = require("./routes/bhawan");
 connection();
 
 app.use(express.json());
-app.use(cors(
-    {
-        origin: '*', // Allow any origin
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true
-    }
-));
+const corsOptions = {
+    origin: '*', // Allow any origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Include this if you need to handle cookies
+    optionsSuccessStatus: 204 // For successful OPTIONS requests
+  };
+  
+  app.use(cors(corsOptions)); // Apply CORS middleware globally
+  
+  // Handle preflight requests
+  app.options('*', cors(corsOptions));
 
 app.use("/api/users" , userRoutes);
 app.use("/api/auth" , authRoutes);
