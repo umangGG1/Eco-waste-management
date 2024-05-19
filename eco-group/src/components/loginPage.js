@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import './loginPage.css';
+import { baseUrl } from "../url";
 
 const LoginPage =() =>{
     const[data, setData] = useState({email:"", password: ""});
@@ -15,7 +16,7 @@ const LoginPage =() =>{
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try {
-            const url = "http://localhost:8080/api/auth";
+            const url = `${baseUrl}/api/auth`;
             const{data: res} = await axios.post(url,data);
             localStorage.setItem("token" , res.data);
             window.location="/admin";

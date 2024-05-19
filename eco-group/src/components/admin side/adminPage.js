@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./adminPage.css";
+import { baseUrl } from '../../url';
 
 const AdminPage = () => {
   const [bhawans, setBhawans] = useState([]);
@@ -10,7 +11,7 @@ const AdminPage = () => {
 };
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/bhawan/all')
+    fetch(`${baseUrl}/api/bhawan/all`)
       .then(response => response.json())
       .then(data => {
         setBhawans(data);
