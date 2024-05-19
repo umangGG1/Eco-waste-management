@@ -16,6 +16,7 @@ const ScannerPage = () => {
         height: 200},
       fps: 10,
       aspectRatio: 1.0,
+      preferFrontCamera: false,
     });
 
     scanner.render(onScanSuccess, onScanError);
