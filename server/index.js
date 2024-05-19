@@ -12,8 +12,8 @@ connection();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://eco-waste-management-client.vercel.app"],
-        methods: ["POST", "GET"],
+        origin: '*', // Allow any origin
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true
     }
 ));
