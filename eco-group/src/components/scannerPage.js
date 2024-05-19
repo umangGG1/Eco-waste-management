@@ -12,11 +12,11 @@ const ScannerPage = () => {
   useEffect(() => {
     const scanner = new Html5QrcodeScanner('reader', {
       qrbox: {
-        width:208,
+        width:200,
         height: 200},
       fps: 10,
       aspectRatio: 1.0,
-      preferFrontCamera: false,
+      exactCamera: 'environment',
     });
 
     scanner.render(onScanSuccess, onScanError);
@@ -61,7 +61,7 @@ const ScannerPage = () => {
           Redirecting to the hostel 
         </div>
       ) : (
-        <div id="reader" style={{width:"250px" , height:"250px", overflow: "hidden"}}></div>
+        <div id="reader" ></div>
       )}
       
     </div>
